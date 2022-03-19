@@ -29,6 +29,13 @@ export default {
             carnivalList: [],
         };
     },
+    created() {
+        fetch('https://it3-hbn-default-rtdb.firebaseio.com/carnaval.json')
+        .then(resposta => resposta.json())
+        .then(json => {
+            this.carnivalList = json;
+        });
+    }
     
 };
 </script>
