@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <h2>Página do usuário</h2>
+        <h2 class="text-h5 text-center mb-7 mt-5">Favoritos ⭐</h2>
     </v-container>
 </template>
 
