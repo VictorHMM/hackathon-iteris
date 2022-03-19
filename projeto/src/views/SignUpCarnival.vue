@@ -49,9 +49,7 @@
 
             <v-checkbox
               v-model="checkbox"
-              :rules="[rules.required]"
-              label="Quero receber novidades por e-mail e SMS?" 
-              required>
+              label="Quero receber novidades por e-mail e SMS"> 
             </v-checkbox>
         </v-form>  
 
