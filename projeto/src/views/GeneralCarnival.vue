@@ -6,7 +6,7 @@
         <thead>
           <tr>
             <th class="text-left">Local</th>
-            <th class="text-center">Bloco</th>
+            <th>Bloco</th>
             <th class="text-right">Fotos</th>
           </tr>
         </thead>

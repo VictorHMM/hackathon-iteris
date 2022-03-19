@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container class="corpo">
     <h1 class="text-h4 text-center">Sobre o Projeto</h1>
     <v-img
       class="inicio-imagem mt-4 mb-4"
@@ -79,6 +79,14 @@ export default {
 
 <style scoped>
 .inicio-imagem {
-  border-radius: 5px;
+  border-radius: 4px;
+}
+a[href] {
+  color: orangered;
+  text-decoration: none;
+}
+h1,
+h2 {
+  color: orangered;
 }
 </style>
