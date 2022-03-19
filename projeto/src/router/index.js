@@ -7,6 +7,7 @@ import LocalCarnival from '../views/LocalCarnival.vue'
 import LoginCarnival from '../views/LoginCarnival.vue'
 import NameCarnival from '../views/NameCarnival.vue'
 import SignUpCarnival from '../views/SignUpCarnival.vue'
+import UserCarnival from '../views/UserCarnival.vue'
 
 Vue.use(VueRouter)
 
@@ -47,13 +48,10 @@ const routes = [
     component: SignUpCarnival
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutCarnival.vue')
-  }
+    path: '/user',
+    name: 'UserCarnival',
+    component: UserCarnival
+  },
 ]
 
 const router = new VueRouter({
