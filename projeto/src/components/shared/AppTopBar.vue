@@ -16,7 +16,9 @@
 
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
-      <v-app-bar-title>Início</v-app-bar-title>
+      <v-app-bar-title>
+        <span id="title">Cadê meu bloco? 🎉</span>
+        </v-app-bar-title>
 
       <v-spacer></v-spacer>
 
@@ -34,7 +36,7 @@
           v-model="group"
           active-class="grey--text text--accent-4"
         >
-        <router-link to="/home">
+        <router-link to="/">
           <v-list-item>
             <v-list-item-icon>
               <v-icon>mdi-home</v-icon>
@@ -106,5 +108,9 @@ export default {
 <style scoped>
 a {
   text-decoration: none;
+}
+
+#title {
+  text-shadow: 2px 2px black;
 }
 </style>
