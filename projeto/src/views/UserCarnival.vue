@@ -1,7 +1,6 @@
 <template>
   <v-container>
-    <h2>Favorito</h2>
-
+    <h2 class="text-h5 text-center mb-7 mt-5">Favoritos ⭐</h2>
     <v-card
       class="mb-4"
       elevation="6"
