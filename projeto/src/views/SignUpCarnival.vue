@@ -56,7 +56,7 @@
         </v-form>  
 
         <div class="botoes">
-            <!-- <router-link to="/login"> -->
+            <router-link to="/login">
             <v-btn
                 class="botaoCadastrar"
                 color="green"
@@ -68,7 +68,8 @@
             >
                 Cadastrar
             </v-btn>
-            <!-- </router-link> -->
+            </router-link>
+
             <v-btn
                 class="botaoLimpar"
                 color="green"
@@ -108,12 +109,7 @@ export default {
     },
     methods: {
         cadastrar() {
-            this.nome = "Cadastro realizado. Faça login.";
-            this.password = "*****";
-            this.numeroTelefone = "Cadastro realizado. Faça login.";
-            this.email = "Cadastro realizado. Faça login.";
-            this.endereco = "Cadastro realizado. Faça login.";
-            this.select = "Cadastro realizado. Faça login.";
+            
         },
         limpar() {
             this.nome = "";
@@ -121,7 +117,7 @@ export default {
             this.numeroTelefone = "";
             this.email = "";
             this.endereco = "";
-            this.select = "";
+            this.checkbox = null;
         },
     },
 };
