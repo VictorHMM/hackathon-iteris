@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <v-img class="mb-4 mt-4" 
+        <v-img class="mb-4 mt-4 inicio-imagem" 
             src="../assets/carnaval.jpg"
             >
         </v-img>
@@ -21,4 +21,7 @@ export default {
 </script>
 
 <style scoped>
+.inicio-imagem {
+  border-radius: 5px;
+}
 </style>

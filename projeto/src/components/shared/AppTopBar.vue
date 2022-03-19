@@ -13,6 +13,7 @@
       <v-app-bar-title>
         <span id="title">Cadê meu bloco? 🎉</span>
         </v-app-bar-title>
+        <v-spacer></v-spacer>
 
       <v-tooltip v-if="!$vuetify.theme.dark" bottom>
         <template v-slot:activator="{ on, attrs }">
