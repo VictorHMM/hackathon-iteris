@@ -1,12 +1,12 @@
 <template>
   <v-container>
-    <h2 class="text-h5 text-center mb-3 mt-5">Blocos Carnaval</h2>
+    <h2 class="text-h5 text-center mb-7 mt-5">Blocos Carnaval</h2>
     <v-simple-table>
       <template v-slot:default>
         <thead>
           <tr>
-            <th class="text-left">Local</th>
-            <th>Bloco</th>
+            <th class="text-left">Locais</th>
+            <th>Blocos</th>
             <th class="text-right">Fotos</th>
           </tr>
         </thead>
