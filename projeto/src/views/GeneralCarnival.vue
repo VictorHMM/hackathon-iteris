@@ -16,7 +16,7 @@
             <td>{{ lista.name }}</td>
             <td class="text-right">
               <v-avatar size="25">
-                <img :src="lista.photo" :alt="fotos - lista" />
+                <img :src="lista.photo" alt="lista-fotos" />
               </v-avatar>
             </td>
           </tr>
