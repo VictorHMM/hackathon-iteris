@@ -47,7 +47,7 @@
                 required>
             </v-checkbox>
 
-            <v-checkbox
+            <v-checkbox>
               v-model="checkbox"
               label="Quero receber novidades por e-mail e SMS?" 
             </v-checkbox>
