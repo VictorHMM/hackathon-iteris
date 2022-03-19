@@ -23,21 +23,21 @@
             v-model="numeroTelefone"
             :rules="[rules.required]" 
             label="Telefone" 
-            required>
+            required
+            placeholder="(XX) XXXXX-XXXX">
             </v-text-field>
             
             <v-text-field 
             v-model="email"
             :rules="[rules.required, rules.email]"
             label="E-mail"
-            required>
+            required
+            placeholder="seuemail@dominio.com">
             </v-text-field>
 
             <v-text-field 
             v-model="endereco" 
-            :rules="[rules.required]"
-            label="Endereço" 
-            required>
+            label="Endereço">
             </v-text-field>
 
             <v-checkbox
@@ -92,8 +92,8 @@ export default {
         return {
             nome: "",
             password: "",
-            numeroTelefone: "(xx) xxxxx-xxxx",
-            email: "seuemail@seuemail.com",
+            numeroTelefone: "",
+            email: "",
             endereco: "",
             rules: {
                 required: value => !!value || 'Required.',
