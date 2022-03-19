@@ -117,7 +117,7 @@ export default {
             this.numeroTelefone = "";
             this.email = "";
             this.endereco = "";
-            this.select = "";
+            this.checkbox = null;
         },
     },
 };
