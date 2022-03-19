@@ -1,36 +1,28 @@
 <template>
   <v-container>
-       <h2 class="text-h5 text-center mb-3 mt-5">Blocos Carnaval</h2>
-     <v-simple-table>
-    <template v-slot:default>
-      <thead>
-        <tr>
-          <th class="text-left">
-            Local
-          </th>
-          <th class="text-center">
-            Bloco
-          </th>
-          <th class="text-right ">
-              Fotos
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr
-          v-for="lista in carnivalList"
-          :key="lista.address"
-        >
-          <td>{{ lista.address }}</td>
-          <td>{{ lista.name }}</td>
-          <td class="text-right">
+    <h2 class="text-h5 text-center mb-3 mt-5">Blocos Carnaval</h2>
+    <v-simple-table>
+      <template v-slot:default>
+        <thead>
+          <tr>
+            <th class="text-left">Local</th>
+            <th class="text-center">Bloco</th>
+            <th class="text-right">Fotos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="lista in carnivalList" :key="lista.id">
+            <td>{{ lista.address }}</td>
+            <td>{{ lista.name }}</td>
+            <td class="text-right">
               <v-avatar size="25">
-                  <img :src="lista.photo" :alt="fotos-lista">
-                </v-avatar></td>
-        </tr>
-      </tbody>
-    </template>
-  </v-simple-table>
+                <img :src="lista.photo" :alt="fotos - lista" />
+              </v-avatar>
+            </td>
+          </tr>
+        </tbody>
+      </template>
+    </v-simple-table>
   </v-container>
 </template>
 
@@ -39,7 +31,7 @@ export default {
   name: "GeneralCarnival",
   data() {
     return {
-      carnivalList: []
+      carnivalList: [],
     };
   },
   created() {
