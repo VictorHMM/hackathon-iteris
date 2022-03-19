@@ -32,10 +32,10 @@
         </thead>
         <tbody>
           <tr v-for="bloco in arrayCarnival" :key="bloco.id">
-            <td>{{ bloco.nome }}</td>
+            <td>{{ bloco.name }}</td>
             <td>
               <v-avatar>
-                <img :src="bloco.foto" />
+                <img :src="bloco.photo" />
               </v-avatar>
             </td>
           </tr>
@@ -51,7 +51,7 @@ export default {
   data() {
     return {
       listaApi: [],
-      arrayTeste: [],
+      arrayCarnival: [],
     };
   },
   created() {},
@@ -63,8 +63,9 @@ export default {
           console.log("sgudsh");
           this.listaApi = json;
           console.log(this.listaApi);
+          this.arrayCarnival = [];
           this.listaApi.forEach((value) => {
-            if (value.adress.includes(variavel)) {
+            if (value.address.includes(variavel)) {
               this.arrayCarnival.push(value);
             }
           });
