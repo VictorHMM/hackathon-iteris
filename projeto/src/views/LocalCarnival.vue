@@ -1,8 +1,9 @@
 <template>
   <v-container class="LocalCarnival">
+    <h1 class="text-h4 text-center mb-4">Escolha um Destino</h1>
     <v-container id="botao">
-      <v-btn @click="teste('Salvador - BA')" color="secondary" elevation="5">
-        Salvador
+      <v-btn @click="teste('Olinda - PE')" color="secondary" elevation="5">
+        Olinda
       </v-btn>
       <v-btn @click="teste('Tucuruí - PA')" color="secondary" elevation="5">
         Tucuruí
@@ -12,8 +13,8 @@
       </v-btn>
     </v-container>
     <v-container id="botao">
-      <v-btn @click="teste('Olinda - PE')" color="secondary" elevation="5">
-        Olinda
+      <v-btn @click="teste('Salvador - BA')" color="secondary" elevation="5">
+        Salvador
       </v-btn>
       <v-btn
         @click="teste('Rio de Janeiro - RJ')"
@@ -23,25 +24,76 @@
         Rio de Janeiro
       </v-btn>
     </v-container>
-    <v-simple-table>
-      <template v-slot:default>
-        <thead>
-          <tr>
-            <th class="text-left">Carnavais</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="bloco in arrayCarnival" :key="bloco.id">
-            <td>{{ bloco.name }}</td>
-            <td>
-              <v-avatar>
-                <img :src="bloco.photo" />
-              </v-avatar>
-            </td>
-          </tr>
-        </tbody>
-      </template>
-    </v-simple-table>
+
+    <v-card
+      class="mb-4"
+      elevation="6"
+      outlined
+      shap
+      v-for="bloco in arrayCarnival"
+      :key="bloco.id"
+    >
+      <v-card-title>{{ bloco.name }}</v-card-title>
+      <v-card-subtitle>{{ bloco.address }}</v-card-subtitle>
+      <v-img :src="bloco.photo" />
+      <v-card-text>{{ bloco.description }}</v-card-text>
+      <v-card-actions
+        ><v-btn
+          @click="compartilhar = true"
+          color="primary"
+          elevation="9"
+          raised
+          small
+          >Compartilhar</v-btn
+        ><v-btn @click="mais = true" color="primary" elevation="9" raised small
+          >Quero receber novidades!</v-btn
+        ></v-card-actions
+      >
+    </v-card>
+    <v-dialog v-model="compartilhar" max-width="290">
+      <v-card>
+        <v-card-text>
+          <v-form id="em">
+            <v-text-field
+              v-model="text"
+              label="
+              https://linkcarnaval.com.br"
+            ></v-text-field>
+          </v-form>
+          Copie esse link para compartilhar com seus amigos
+        </v-card-text>
+
+        <v-card-actions>
+          <v-spacer></v-spacer>
+
+          <v-btn color="green darken-1" text @click="compartilhar = false">
+            Fechar
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
+    <v-dialog v-model="mais" max-width="400">
+      <v-card>
+        <v-form id="em">
+          <v-text-field v-model="name" label="Seu Nome" required></v-text-field>
+          <v-text-field
+            type="email"
+            v-model="email"
+            label="Seu Email"
+            required
+          ></v-text-field>
+        </v-form>
+
+        <v-card-actions>
+          <v-spacer></v-spacer>
+
+          <v-btn color="green darken-1" text @click="mais = false">
+            Enviar
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-container>
 </template>
 
@@ -52,6 +104,8 @@ export default {
     return {
       listaApi: [],
       arrayCarnival: [],
+      compartilhar: false,
+      mais: false,
     };
   },
   created() {},
@@ -80,5 +134,8 @@ export default {
 #botao {
   display: flex;
   justify-content: space-around;
+}
+#em {
+  padding: 10px;
 }
 </style>
