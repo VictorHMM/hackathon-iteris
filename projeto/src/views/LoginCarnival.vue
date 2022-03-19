@@ -6,8 +6,8 @@
           </div>
 
           <v-form class="login-box">
-              <v-text-field v-model="login_id" label="ID" required></v-text-field>
-              <v-text-field type="password" v-model="login_pass" label="Password" required></v-text-field>
+              <v-text-field v-model="email" label="E-mail" placeholder="seuemail@dominio.com" required></v-text-field>
+              <v-text-field type="password" v-model="password" label="Senha" required></v-text-field>
           </v-form>
 
           <div class="botoes">
@@ -19,7 +19,7 @@
               medium
               outlined
               rounded
-              >Login
+              >Entrar
               </v-btn>
               </router-link>
               
@@ -36,8 +36,8 @@ export default {
   name: "LoginCarnival",
   data() {
     return {
-      login_id: "",
-      login_pass: "",
+      email: "",
+      password: "",
     };
   },
 };

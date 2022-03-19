@@ -7,7 +7,7 @@
             <v-text-field 
             v-model="nome" 
             :rules="[rules.required]"
-            label="Name" 
+            label="Nome" 
             required>
             </v-text-field>
 
