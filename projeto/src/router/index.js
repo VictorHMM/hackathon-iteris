@@ -5,7 +5,6 @@ import AboutCarnival from '../views/AboutCarnival'
 import GeneralCarnival from '../views/GeneralCarnival.vue'
 import LocalCarnival from '../views/LocalCarnival.vue'
 import LoginCarnival from '../views/LoginCarnival.vue'
-import NameCarnival from '../views/NameCarnival.vue'
 import SignUpCarnival from '../views/SignUpCarnival.vue'
 import UserCarnival from '../views/UserCarnival.vue'
 
@@ -36,11 +35,6 @@ const routes = [
     path: '/login',
     name: 'LoginCarnival',
     component: LoginCarnival
-  },
-  {
-    path: '/name',
-    name: 'NameCarnival',
-    component: NameCarnival
   },
   {
     path: '/signUp',

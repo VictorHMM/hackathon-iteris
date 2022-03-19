@@ -10,7 +10,10 @@
 
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
-      <v-app-bar-title>Início</v-app-bar-title>
+      <v-app-bar-title>
+        <span id="title">Cadê meu bloco? 🎉</span>
+        </v-app-bar-title>
+        <v-spacer></v-spacer>
 
       <v-tooltip v-if="!$vuetify.theme.dark" bottom>
         <template v-slot:activator="{ on, attrs }">
@@ -51,13 +54,13 @@
           v-model="group"
           active-class="grey--text text--accent-4"
         >
-          <router-link to="/home">
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-home</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>Início</v-list-item-title>
-            </v-list-item>
+        <router-link to="/">
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon>mdi-home</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Início</v-list-item-title>
+          </v-list-item>
           </router-link>
 
           <router-link to="/general">
@@ -127,5 +130,9 @@ export default {
 <style scoped>
 a {
   text-decoration: none;
+}
+
+#title {
+  text-shadow: 2px 2px black;
 }
 </style>
