@@ -1,42 +1,54 @@
 <template>
   <v-container>
-    <v-card>
-    <v-card-title>
-      Carnival
-      <v-spacer></v-spacer>
-      <v-text-field
-        v-model="search"
-        append-icon="mdi-magnify"
-        label="Search"
-        single-line
-        hide-details
-      ></v-text-field>
-    </v-card-title>
-    <v-data-table
-      :headers="headers"
-      :items="carnival"
-      :search="search"
-    ></v-data-table>
-  </v-card>
+       <h2 class="text-h5 text-center mb-3 mt-5">Blocos Carnaval</h2>
+     <v-simple-table>
+    <template v-slot:default>
+      <thead>
+        <tr>
+          <th class="text-left">
+            Local
+          </th>
+          <th class="text-center">
+            Bloco
+          </th>
+          <th class="text-right ">
+              Fotos
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          v-for="lista in carnivalList"
+          :key="lista.address"
+        >
+          <td>{{ lista.address }}</td>
+          <td>{{ lista.name }}</td>
+          <td class="text-right">
+              <v-avatar size="25">
+                  <img :src="lista.photo" :alt="fotos-lista">
+                </v-avatar></td>
+        </tr>
+      </tbody>
+    </template>
+  </v-simple-table>
   </v-container>
 </template>
 
 <script>
 export default {
-    name: "GeneralCarnival",
-    data() {
-        return {
-            carnivalList: [],
-        };
-    },
-    created() {
-        fetch('https://it3-hbn-default-rtdb.firebaseio.com/carnaval.json')
-        .then(resposta => resposta.json())
-        .then(json => {
-            this.carnivalList = json;
-        });
-    }
-    
+  name: "GeneralCarnival",
+  data() {
+    return {
+      carnivalList: []
+    };
+  },
+  created() {
+    fetch("https://it3-hbn-default-rtdb.firebaseio.com/carnaval.json")
+      .then((resposta) => resposta.json())
+      .then((json) => {
+        this.carnivalList = json;
+      });
+  },
 };
 </script>
 
