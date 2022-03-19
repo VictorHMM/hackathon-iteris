@@ -1,13 +1,10 @@
 <template>
-    
+  <div />
 </template>
 
 <script>
-export default {
-    name: 'AppTopBar'
-}
+export default {};
 </script>
 
 <style scoped>
-
 </style>
