@@ -1,4 +1,5 @@
 <h1>Hackaton Decola Luna - Cadê Meu Bloco?</h1>
+<h2> 🏆 1º lugar na 10ª edição do Hackathon Decola da <a href="https://www.iteris.com.br" target="_blank">Iteris</a></h2>
 
 ### Tópicos 
 
@@ -14,32 +15,37 @@
 
 <p align="justify">
 “Cadê meu Bloco?” foi um projeto desenvolvido para a 10ª Edição do
-      Hackaton Decola - Luna. Aproveitamos a oportunidade que a
+      Hackaton Decola - Luna. Aproveitamos a oportunidade oferecida pela 
       <a href="https://www.iteris.com.br" target="_blank">Iteris</a>
-      nos deu para criar um web app que traz a programação de Blocos de Carnaval
-      pelo Brasil, um movimento muito tradicional que fez falta nesses últimos
+para criar um web app que traz a programação de Blocos de Carnaval
+      pelo Brasil, um movimento muito tradicional que fez muita falta nesses últimos
       anos de pandemia.
-  <br> Nesse projeto utilizamos HTML, CSS e Vue, aproveitando da alimentação de APIs para criar telas que te possibilitam ver os blocos disponíveis, selecionar quais das cidades disponíveis você deseja, além de criar um cadastro para receber a newsletter e poder favoritar os seus blocos favoritos. Essa última parte, porém, ainda está em fase de implementação. 
+  <br> Nesse projeto, utilizamos HTML, CSS e Javascript e o framework Vue, aproveitando da alimentação de APIs para criar telas que te possibilitam ver os blocos disponíveis, escolher em quais das cidades disponíveis você quer festejar, além de criar um cadastro para receber a newsletter e poder favoritar os seus blocos prediletos. Essa última parte, porém, ainda está em fase de implementação. 
 </p>
 
 ## Pré-Requisitos
 
-:warning: [Node](https://nodejs.org/en/download/)<br>
-:warning: [Vue/Cli](https://www.google.com/)
+:warning: [Node js](https://nodejs.org/en/download/)<br>
+:warning: [Vue 2](https://cli.vuejs.org/)<br>
+:warning: [Vuetify](https://vuetifyjs.com/en/getting-started/installation/)<br>
 
 ## Como rodar a aplicação?
 
-Abra o terminal na pasta deseja e faça a clonagem do repositório
+Abra o terminal na pasta desejada e faça a clonagem do repositório
 ```
 git pull https://github.com/VictorHMM/hackathon-iteris
 ```
-rode o servidor, ou coisa assim
+dentro da pasta "projeto", rode o comando 
+```
+npm install
+```
+rode o servidor
 ```
 npm run serve
 ```
 acesse o lolcalhost indicado no terminal pelo seu navegador
 
-e ta pronto o sorvetinho, eu acho
+e tá pronto o sorvetinho
 
 ## Quem Desenvolveu?
 
